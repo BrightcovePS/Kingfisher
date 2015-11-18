@@ -107,7 +107,7 @@ extension UIImage {
         case .JPEG: image = UIImage(data: data, scale: scale)
         case .PNG: image = UIImage(data: data, scale: scale)
         case .GIF: image = UIImage.kf_animatedImageWithGIFData(gifData: data, scale: scale, duration: 0.0)
-        case .Unknown: image = nil
+        case .Unknown: image = UIImage(data: data, scale: scale)
         }
         return image
     }
