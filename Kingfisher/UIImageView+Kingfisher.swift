@@ -182,6 +182,10 @@ public extension UIImageView {
             indicator = kf_indicator
             indicator?.hidden = false
             indicator?.startAnimating()
+
+            if let spinner = indicator {
+              self.bringSubviewToFront(spinner)
+            }
         }
         
         image = placeholderImage
